@@ -1,0 +1,2 @@
+EBS Tables 
+Select * from ap_invoices_all;
