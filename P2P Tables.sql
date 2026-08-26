@@ -5,4 +5,6 @@ select * from ap_distributions_all;
 
 select * from ap_supplier_all;
 
+select * from ap_supplier_sites_all;
+
 
