@@ -5,11 +5,77 @@ select * from ap_invoice_lines_all;
 select * from ap_distributions_all;
 
 
+------It Supplier Details --------
 select * from ap_supplier_all;
-
 select * from ap_supplier_sites_all;
 
 select * from ap_Payments_all;
+
+select * from ap_checks_all;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
