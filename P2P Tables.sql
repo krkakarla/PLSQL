@@ -7,4 +7,5 @@ select * from ap_supplier_all;
 
 select * from ap_supplier_sites_all;
 
+select * from ap_Payments_all;
 
