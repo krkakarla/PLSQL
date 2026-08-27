@@ -66,4 +66,13 @@ SELECT * FROM GL_JE_BATCHES WHERE NAME = 'Receivable A 1546007 ';
 SELECT * FROM GL_JE_HEADERS WHERE JE_BATCH_ID = '2927184';
 SELECT * FROM GL_JE_LINES WHERE HE_HEADER_ID = '' Status U It means data not posted. 
 
------------Data Moved to Oracle Gl Table. 
+-----------Data Moved to Oracle Gl Table. ------------
+
+CRS ChRM Import Tables. 
+Once Orders are available at OMS Order Table then we will submit “EXPD CRS EAC Order ChRM Import and Commission Daily Request Set” 
+Once Program completed then program will send the data to below table. 
+1)	ozf_funds_utilized_all_b
+2)	ozf_funds_untilized_all_b 
+XXEXPD_OZF_COMM_EXPORT_T
+
+  
