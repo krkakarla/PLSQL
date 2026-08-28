@@ -3,7 +3,7 @@ Initiatlly Data will be send to Interface table
 
   Header Table : 
   
-  For service sector like travel company generate the orders and send the order details to custom table => 
+----- For service sector like travel company generate the orders and send the order details to custom table =>
 Ex: 
 Header Table:  xxexp_om_oms_ord_hdr_t 
 Lines table : xxexp_om_oms_ord_line_t
