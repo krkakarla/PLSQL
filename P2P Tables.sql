@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 	I.Invoice Details Table. 
 We can see invoices details at below table however the transaction accounting details available at XLA event Level. 
 1.	select * from ap_invoices_all;
@@ -37,3 +38,101 @@ Payment Sub ledger Accounting
 8.	select * from xla_events where EVENT_ID = '5339125905';
 9.	select * from xla_ae_headers where EVENT_ID = '5339125905';
 10.	select * from xla_ae_lines where ae_header_id = '5330865517';
+=======
+------It is P2P table Details -------
+
+Select * from ap_invoices_all;
+select * from ap_invoice_lines_all;
+select * from ap_distributions_all;
+
+
+------It Supplier Details --------
+select * from ap_supplier_all;
+select * from ap_supplier_sites_all;
+
+select * from ap_Payments_all;
+
+select * from ap_checks_all;
+
+-------Lookup Tables Details ------
+
+select 
+lookup_type, lookup_code, meaning, description 
+from fnd_lookup_values 
+where lookup_type in ('AP_INVOICE_TYPE', 'AP_INVOICE_ACTION', 'AP_INVOICE_STATUS', 'AP_PAYMENT_METHODS', 'AP_PAYMENT_STATUS', 'AP_CHECK_STATUS');
+
+select lookup_type, 
+lookup_code, 
+meaning, 
+description,
+enabled_flag,
+start_date_active,
+end_date_active
+from fnd_lookup_values 
+where lookup_type in ('PAY GROUP')
+ORDER BY lookup_type, lookup_code;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
