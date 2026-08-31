@@ -1,3 +1,27 @@
+------------------------------GL Details -------------------------------------------------------
+select * from apps.GL_JE_HEADERS;
+
+select * from apps.gl_je_categories;
+--------------------------------------------FA Objects. ------------------
+
+select * from all_objects 
+where status != 'VALID' and OBJECT_NAME like 'HR_UTILITY%';
+----------------------------------------GL Table Details ---------------------------------------
+GL Table Details : 
+	
+select * from apps.gl_code_combinations where segment1 = '01' and Segment2 = '32' and segment3 = '12' 
+and segment4 = '66' and segment5 = '160500' and segment6 = '000' and segment7 = '000';
+
+---------------------------------------------Report Mapping Details------------------------------
+
+select GM.to_segment_name, gr.parent_flex_value, gr.child_flex_value_low, gr.child_flex_value_high  from 
+apps.GL_CONS_SEGMENT_MAP_V GM, apps.GL_CONS_ROLLUP_RANGES_V GR
+where GM.to_segment_name = 'STATFR_ACCOUNT'   -------------Segment Name 
+and gr.child_flex_value_high in ('219000','330500','118002','330500') --------
+---('161100','181000','181110','180000','180120','180205','330500')
+--------('320100','330100','330400','350110','330510')
+and   gm.segment_map_id = gr.segment_map_id;
+
 ------------------------------------------GL Interface Table Data Insertion---------------------------
 create or replace PACKAGE BODY xx_gl_interface_pkg AS
 --Write to concurrent program log
@@ -47,7 +71,7 @@ create or replace PACKAGE BODY xx_gl_interface_pkg AS
             gjh.name||'-'||gjh.je_header_id                     journal_name,
             gjh.je_header_id                                je_header_id,
             gjh.description                                 head_description,
-            gjl.description                                 line_description,
+	            gjl.description                                 line_description,
             gjl.code_combination_id,
             gjl.entered_dr,
             gjl.entered_cr,
