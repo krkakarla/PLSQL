@@ -1,3 +1,13 @@
+---------------------GL Value Set Values ------------------------------------------------------
+SELECT ffvs.flex_value_set_id, ffvs.flex_value_set_name, ffvs.description set_description, ffvs.validation_type,
+ffv.flex_value, ffvt.description value_description, ffv.enabled_flag, ffv.last_update_date, ffv.last_updated_by,
+ffv.attribute1, ffv.attribute2 
+FROM apps.fnd_flex_value_sets ffvs, apps.fnd_flex_values ffv, apps.fnd_flex_values_tl ffvt
+WHERE
+ffvs.flex_value_set_id = ffv.flex_value_set_id
+and ffv.flex_value_id = ffvt.flex_value_id
+and flex_value_set_name like 'KE_FA_CAR_NUMBER_VS%'
+ORDER BY flex_value desc;
 ------------------------------GL Details -------------------------------------------------------
 select * from apps.GL_JE_HEADERS;
 
